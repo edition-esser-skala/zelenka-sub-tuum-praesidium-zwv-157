@@ -282,7 +282,7 @@ SecondSopranoNotes = {
 		es'\fermata-\tweak DynamicText.X-offset #-2 -\f r8 es d c
 		h4( c2 h4)
 		c8 c b a b[( g b c] %115
-		d[ a] d4. c16[ b] a8[ d])
+		d[ g,] d'4. c16[ b] a8[ d])
 		g, c, es g as[( f] as4~)
 		as g2 c4~
 		c8 c h4 c8 g' f es
