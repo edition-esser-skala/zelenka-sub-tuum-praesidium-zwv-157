@@ -1,96 +1,37 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-\paper {
-  indent = 1\cm
-  top-margin = 1\cm
-  system-separator-markup = ##f
-  system-system-spacing =
-    #'((basic-distance . 17)
-       (minimum-distance . 17)
-       (padding . -100)
-       (stretchability . 0))
-
-  top-system-spacing =
-    #'((basic-distance . 10)
-       (minimum-distance . 10)
-       (padding . -100)
-       (stretchability . 0))
-
-  top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -100)
-       (stretchability . 0))
-
-  markup-system-spacing =
-    #'((basic-distance . 10)
-       (minimum-distance . 10)
-       (padding . -100)
-       (stretchability . 0))
-
-  systems-per-page = #3
-
-  #(define (page-post-process layout pages) (ly:create-toc-file layout pages))
-}
+\include "score_settings/coro.ly"
 
 \layout {
   \context {
-    \Lyrics
-    \override LyricText.font-size = #-.5
-  }
-  \context {
-    \ChoirStaff
-    \override StaffGrouper.staff-staff-spacing =
-      #'((basic-distance . 12)
-         (minimum-distance . 12)
-         (padding . -100)
-         (stretchability . 0))
-    \override StaffGrouper.staffgroup-staff-spacing =
-      #'((basic-distance . 13)
-         (minimum-distance . 13)
-         (padding . -100)
-         (stretchability . 0))
-  }
-  \context {
     \Staff
-    instrumentName = "org"
+    \unset instrumentName
   }
 }
 
-#(set-global-staff-size 15.87)
-
 \book {
   \bookpart {
-    \header {
-      number = "I"
-    }
     \paper { indent = 3\cm }
-    \tocSection "1" "ZWV 157/1"
+    \section "I" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
           \new Staff {
-            \set Staff.instrumentName = \SopranoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipit "Soprano" "soprano" #-20.5 #-0.3
             \new Voice = "Soprano" { \dynamicUp \FirstSopranoNotes }
           }
           \new Lyrics \lyricsto Soprano \FirstSopranoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \AltoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipit "Alto" "alto" #-18.3 #-0.3
             \new Voice = "Alto" { \dynamicUp \FirstAltoNotes }
           }
           \new Lyrics \lyricsto Alto \FirstAltoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \TenoreIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipit "Tenore" "tenor" #-19.7 #-0.3
             \new Voice = "Tenore" { \dynamicUp \FirstTenoreNotes }
           }
           \new Lyrics \lyricsto Tenore \FirstTenoreLyrics
@@ -115,10 +56,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "II"
-    }
-    \tocSection "2" "ZWV 157/2"
+    \section "II" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -160,10 +99,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "III"
-    }
-    \tocSection "3" "ZWV 157/3"
+    \section "III" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -205,10 +142,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "IV"
-    }
-    \tocSection "4" "ZWV 157/4"
+    \section "IV" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -250,10 +185,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "V"
-    }
-    \tocSection "5" "ZWV 157/5"
+    \section "V" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -295,10 +228,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "VI"
-    }
-    \tocSection "6" "ZWV 157/6"
+    \section "VI" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -340,10 +271,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "VII"
-    }
-    \tocSection "7" "ZWV 157/7"
+    \section "VII" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -385,10 +314,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "VIII"
-    }
-    \tocSection "8" "ZWV 157/8"
+    \section "VIII" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -430,10 +357,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "IX"
-    }
-    \tocSection "9" "ZWV 157/9"
+    \section "IX" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<
@@ -475,10 +400,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "X"
-    }
-    \tocSection "10" "ZWV 157/10"
+    \section "X" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new ChoirStaff <<

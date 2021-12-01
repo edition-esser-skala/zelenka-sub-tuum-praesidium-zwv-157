@@ -1,16 +1,5 @@
 \version "2.22.0"
 
-TenoreIncipit = \markup {
-  "Tenore" \hspace #-19.2 \score {
-    \new Staff \with {
-      \remove Time_signature_engraver
-    } {
-      \clef tenor s4 \bar empty
-    }
-    \layout { }
-  } \hspace #-0.8
-}
-
 FirstTenoreNotes = {
   \relative c' {
     \clef "G_8"

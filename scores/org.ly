@@ -1,52 +1,13 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-\paper {
-  indent = 1\cm
-  top-margin = 1.5\cm
-  system-separator-markup = ##f
-  system-system-spacing =
-    #'((basic-distance . 18)
-       (minimum-distance . 18)
-       (padding . -100)
-       (stretchability . 0))
-
-  top-system-spacing =
-    #'((basic-distance . 12)
-       (minimum-distance . 12)
-       (padding . -100)
-       (stretchability . 0))
-
-  top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -100)
-       (stretchability . 0))
-
-  markup-system-spacing =
-    #'((basic-distance . 12)
-       (minimum-distance . 12)
-       (padding . -100)
-       (stretchability . 0))
-
-  systems-per-page = #9
-}
-
-#(set-global-staff-size 17.82)
-
-\layout {
-  \context {
-    \Staff
-    instrumentName = "org"
-  }
-}
+#(define option-instrument-name "org")
+\include "score_settings/one-staff.ly"
 
 \book {
   \bookpart {
-    \header {
-      number = "I"
-    }
+    \section "I" "Sub tuum praesidium"
+    \addTocEntry
     \paper { indent = 2\cm }
     \score {
       <<
@@ -59,9 +20,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "II"
-    }
+    \section "II" "Sub tuum praesidium"
+    \addTocEntry
     \paper { page-count = #2 }
     \score {
       <<
@@ -71,9 +31,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "III"
-    }
+    \section "III" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new Staff { \ThirdOrgano }
@@ -82,9 +41,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "IV"
-    }
+    \section "IV" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new Staff { \FourthOrgano }
@@ -93,9 +51,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "V"
-    }
+    \section "V" "Sub tuum praesidium"
+    \addTocEntry
     \paper { systems-per-page = #6 }
     \score {
       <<
@@ -105,9 +62,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "VI"
-    }
+    \section "VI" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new Staff { \SixthOrgano }
@@ -116,9 +72,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "VII"
-    }
+    \section "VII" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new Staff { \SeventhOrgano }
@@ -127,9 +82,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "VIII"
-    }
+    \section "VIII" "Sub tuum praesidium"
+    \addTocEntry
     \paper { systems-per-page = #6 }
     \score {
       <<
@@ -139,9 +93,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "IX"
-    }
+    \section "IX" "Sub tuum praesidium"
+    \addTocEntry
     \paper { systems-per-page = #6 }
     \score {
       <<
@@ -151,9 +104,8 @@
     }
   }
   \bookpart {
-    \header {
-      number = "X"
-    }
+    \section "X" "Sub tuum praesidium"
+    \addTocEntry
     \score {
       <<
         \new Staff { \TenthOrgano }
