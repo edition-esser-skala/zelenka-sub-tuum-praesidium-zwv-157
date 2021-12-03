@@ -1,8 +1,11 @@
-composer: Zelenka, Jan Dismas
-title: Sub tuum praesidium
+composer:
+  last: Zelenka
+  first: Jan Dismas
+title: Sub tuum præsidium
 id: ZWV 157
 genre: sacred song
 scoring: S, A, T, B (solo), S, A, T, B (coro), b, org
+license: cc-by-nc-sa-4.0
 sources:
   A1:
     siglum: D-B
@@ -10,5 +13,6 @@ sources:
     date: 1729–1734
     rism: 464141552
     url: http://resolver.staatsbibliothek-berlin.de/SBB0001A60700000000
+    license: CC BY-NC-SA 4.0
     principal: true
 imslp: 10_Sub_tuum_praesidium,_ZWV_157_(Zelenka,_Jan_Dismas)
